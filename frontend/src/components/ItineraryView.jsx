@@ -34,7 +34,7 @@ function ItineraryView({ styles }) {
       {itinerary.ai_response && (
         <p className="mt-8">
           {itinerary.ai_response.split(/(?=Day \d+:)/g).map((part, index) => {
-            if (part.length > 0)
+            if (part.trim().length > 0)
               return (
                 <div
                   key={index}
